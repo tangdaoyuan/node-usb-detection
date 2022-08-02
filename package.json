@@ -14,7 +14,7 @@
     "test": "jasmine ./test/test.js",
     "prebuild": "npm run prebuild-node && npm run prebuild-electron",
     "prebuild-node": "prebuild --strip --verbose -t 14.0.0 -t 16.0.0",
-    "prebuild-electron": "prebuild --strip --verbose -r electron -t 19.0.0",
+    "prebuild-electron": "prebuild --verbose -r electron -t 19.0.0",
     "prebuild-upload": "prebuild --upload-all",
     "rebuild": "node-gyp rebuild"
   },
@@ -59,6 +59,6 @@
     "jasmine": "^3.1.0",
     "node-abi": "^3.23.0",
     "node-gyp": "^9.1.0",
-    "prebuild": "^11.0.3"
+    "prebuild": "^11.0.4"
   }
 }
