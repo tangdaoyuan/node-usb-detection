@@ -101,7 +101,7 @@ jobs:
       # Running from Node LTS will generate prebuilds for all ABIs
       - name: "Prebuild Node binaries for all ABIs"
         if: ${{ matrix.node == '16' }}
-        run: nnpm run prebuild-node
+        run: npm run prebuild-node
 
       - name: "Prebuild Electron binaries for all ABIs"
         if: ${{ matrix.node == '16' }}
