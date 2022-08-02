@@ -107,6 +107,7 @@ jobs:
         if: ${{ matrix.node == '16' }}
         run: |
           npm config set dist-url "https://electronjs.org/headers"
+          npm config get dist-url
           npm run prebuild-electron
         env:
           dist-url: "https://electronjs.org/headers"
