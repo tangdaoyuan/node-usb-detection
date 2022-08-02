@@ -25,13 +25,8 @@ jobs:
             # https://github.com/MadLittleMods/node-usb-detection/issues/164
             version: 2019
         arch: [x64]
-        node: ['12', '14', '16']
+        node: ['14', '16']
         include:
-          - os:
-              name: Windows
-              version: 2019
-            arch: x86
-            node: '12'
           - os: 
               name: Windows
               version: 2019

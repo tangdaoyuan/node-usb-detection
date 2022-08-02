@@ -13,7 +13,7 @@
     "validate": "npm run lint && npm test",
     "test": "jasmine ./test/test.js",
     "prebuild": "npm run prebuild-node && npm run prebuild-electron",
-    "prebuild-node": "prebuild --force --strip --verbose -t 12.0.0 -t 14.0.0 -t 16.0.0",
+    "prebuild-node": "prebuild --force --strip --verbose -t 14.0.0 -t 16.0.0",
     "prebuild-electron": "prebuild --force --strip --verbose -r electron -t 19.0.0",
     "prebuild-upload": "prebuild --upload-all",
     "rebuild": "node-gyp rebuild"
