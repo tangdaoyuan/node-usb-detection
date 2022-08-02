@@ -111,6 +111,7 @@ jobs:
         env:
           dist-url: "https://electronjs.org/headers"
           npm_config_disturl: "https://electronjs.org/headers"
+          npm_config_tarball: "https://electronjs.org/headers"
 
       - name: "Upload prebuilt binaries"
         if: ${{ matrix.node == '16' }}
