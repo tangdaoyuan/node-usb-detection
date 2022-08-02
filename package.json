@@ -60,5 +60,8 @@
     "node-abi": "^3.23.0",
     "node-gyp": "^9.1.0",
     "prebuild": "^11.0.4"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
