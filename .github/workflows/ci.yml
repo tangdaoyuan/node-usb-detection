@@ -99,9 +99,18 @@ jobs:
 
       # Prebuilds should only be generated once per OS + arch
       # Running from Node LTS will generate prebuilds for all ABIs
-      - name: 'Prebuild binaries for all ABIs'
+      - name: 'Prebuild Node binaries for all ABIs'
         if: ${{ matrix.node == '16' }}
-        run: npm run prebuild
+        run: nnpm run prebuild-node
+      
+      - name: 'Prebuild Electron binaries for all ABIs'
+        if: ${{ matrix.node == '16' }}
+        run: |
+          npm config set dist-url "https://electronjs.org/headers"
+          npm run prebuild-electron
+        env:
+          dist-url: 'https://electronjs.org/headers'
+          DIST_URL: 'https://electronjs.org/headers
 
       - name: 'Upload prebuilt binaries'
         if: ${{ matrix.node == '16' }}
