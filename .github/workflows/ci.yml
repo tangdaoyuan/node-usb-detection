@@ -110,7 +110,7 @@ jobs:
           npm run prebuild-electron
         env:
           dist-url: "https://electronjs.org/headers"
-          DIST_URL: "https://electronjs.org/headers"
+          npm_config_disturl: "https://electronjs.org/headers"
 
       - name: "Upload prebuilt binaries"
         if: ${{ matrix.node == '16' }}
