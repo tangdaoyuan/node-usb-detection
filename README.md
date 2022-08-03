@@ -1,4 +1,4 @@
-[![npm version](https://badge.fury.io/js/usb-detection.svg)](http://badge.fury.io/js/usb-detection) [![Gitter](https://badges.gitter.im/MadLittleMods/node-usb-detection.svg)](https://gitter.im/MadLittleMods/node-usb-detection?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![npm version](https://badge.fury.io/js/@suger-tdy%2Fusb-detection.svg)](http://badge.fury.io/js/@suger-tdy%2Fusb-detection)
 
 
 # usb-detection
@@ -6,13 +6,13 @@
 `usb-detection` allows you to listen for insert/remove events of USB devices on your system.
 
 
-### [Changelog](https://github.com/MadLittleMods/node-usb-detection/blob/master/CHANGELOG.md)
+### [Changelog](https://github.com/tangdaoyuan/node-usb-detection/blob/master/CHANGELOG.md)
 
 
 # Install
 
 ```sh
-npm install usb-detection
+npm install @suger-tdy/usb-detection
 ```
 
 ## Install for Electron
@@ -40,7 +40,7 @@ detection.node was compiled against a different Node.js version using NODE_MODUL
 # Usage
 
 ```js
-var usbDetect = require('usb-detection');
+var usbDetect = require('@suger-tdy/usb-detection');
 
 usbDetect.startMonitoring();
 
@@ -82,7 +82,7 @@ Start listening for USB add/remove/change events. This will cause the Node.js pr
 
 Stop listening for USB add/remove/change events. This will also allow the Node.js process to exit.
 
-This is really only meant to be called once on exit. No guarantees if you start/stop monitoring multiple times, see https://github.com/MadLittleMods/node-usb-detection/issues/53
+This is really only meant to be called once on exit. No guarantees if you start/stop monitoring multiple times, see https://github.com/tangdaoyuan/node-usb-detection/issues/53
 
 
 ## `usbDetect.on(eventName, callback)`
@@ -102,7 +102,7 @@ This is really only meant to be called once on exit. No guarantees if you start/
 
 
 ```js
-var usbDetect = require('usb-detection');
+var usbDetect = require('@suger-tdy/usb-detection');
 usbDetect.startMonitoring();
 
 usbDetect.on('add', function(device) {
@@ -143,7 +143,7 @@ Parameters:
 
 
 ```js
-var usbDetect = require('usb-detection');
+var usbDetect = require('@suger-tdy/usb-detection');
 usbDetect.startMonitoring();
 
 usbDetect.find(function(err, devices) {
@@ -184,7 +184,7 @@ usbDetect.find(function(err, devices) {
 ### The script/process is not exiting/quiting
 
 ```js
-var usbDetect = require('usb-detection');
+var usbDetect = require('@suger-tdy/usb-detection');
 
 // Do some detection
 usbDetect.startMonitoring();
